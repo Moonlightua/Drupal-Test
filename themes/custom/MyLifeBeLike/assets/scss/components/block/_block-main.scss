@@ -1,0 +1,28 @@
+.menu{
+  display:flex;
+  flex-flow:row wrap;
+  clear:both;
+  }
+
+.block.block--main{
+
+  a{
+    color:white;
+    font-size:24px;
+    &:hover{
+      color:$link-color;
+    }
+  }
+  font-weight:bold;
+  font-size:24px;
+  align-items:center;
+  line-height:1.8;
+}
+
+.menu__item{
+  margin-right: gap(3);
+
+  &:last-child {
+    margin-right:0;
+  }
+}

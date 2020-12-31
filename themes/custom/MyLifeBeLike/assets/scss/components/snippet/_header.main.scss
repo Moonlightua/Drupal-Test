@@ -1,0 +1,19 @@
+.header{
+  a{
+    &:hover{
+      color:$link-color;
+    }
+  }
+  font-weight:bold;
+  font-size:24px;
+  align-items:center;
+  line-height:29px;
+}
+
+.page-title{
+  display:none;
+}
+
+.contextual-region.block.block--dloghero{
+    display:none;
+}

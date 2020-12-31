@@ -1,0 +1,23 @@
+# Theme base information.
+screenshot: screenshot.png
+name: MyLifeBeLike theme
+type: theme
+base theme: glisseo
+description: 'MyLifeBeLike theme for my project.'
+package: Glisseo
+core: 8.x
+
+
+libraries:
+  - MyLifeBeLike/style.base
+  - MyLifeBeLike/style.layout
+  - MyLifeBeLike/style.component
+  - MyLifeBeLike/style.utilities
+
+regions:
+  content: Content
+  sidebar_first: 'Sidebar first'
+
+# Disable system libraries.
+libraries-override:
+  system/base: false

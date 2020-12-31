@@ -1,0 +1,24 @@
+
+.node-page-field-content__items{
+  background:white;
+}
+#drupal-live-announce{
+  display:none;
+}
+.main-layout__inner{
+  .dlog-hero.dlog-hero--image.dlog-hero--subtitle{
+    display:none;
+  }
+
+  .dlog-hero.dlog-hero--plain.dlog-hero--no-subtitle{
+    display:none;
+  }
+}
+
+.clear{
+  clear:both;
+}
+
+.trigger.focusable.visually-hidden{
+  display:none;
+}

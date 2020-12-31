@@ -1,0 +1,27 @@
+.footer{
+  background: gray(300);
+  padding: gap(3) 0;
+
+  &__content {
+    @include media-container();
+  }
+
+  &__copyright {
+    text-transform:uppercase;
+    text-align:center;
+    color: gray(700);
+    font-size:15px;
+  }
+
+}
+
+.menu--footer,
+.footer-social{
+  margin-bottom:  gap(4);
+}
+
+.footer__up{
+
+  text-align:center;
+  color: gray(700);
+}

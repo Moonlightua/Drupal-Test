@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present field.
+ *
+ * Available variables:
+ * - attributes: HTML attributes for containing element.
+ * - classes: An array of classes for main wrapper.
+ * - bem_block: The BEM block class.
+ * - entity_type: The name of entity type, which field belongs to.
+ * - bundle: The entity bundle name for the field.
+ * - view_mode: The view mode used to render field.
+ *
+ * @see glisseo_preprocess_field()
+ */
+#}
+
+
+{% set paragraph = element['#object'] %}
+{% set attribute = element['#bundle'] %}
+{% set classes = classes ?: [ 'paragraph-title', attribute] %}
+{% set title_wrapper = paragraph.getBehaviorSetting('site_paragraphs_paragraph_title', 'title_wrapper', 'h2') %}
+
+<{{ title_wrapper }}{{ attributes.addClass(classes) }}>
+{{ items[0].content }}
+</{{ title_wrapper }}>
+
+

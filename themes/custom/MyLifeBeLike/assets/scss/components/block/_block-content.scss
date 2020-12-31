@@ -1,0 +1,20 @@
+.block.block--mylifebelike-content{
+    @include media-container();
+}
+
+.tabs.tabs--primary{
+    justify-content:center;
+}
+
+.tabs__item {
+  margin-right: gap(2);
+ a{
+   color:#203A43;
+   font-weight:bold;
+   font-size:19px;
+
+   &:hover{
+     color:blue;
+   }
+ }
+}

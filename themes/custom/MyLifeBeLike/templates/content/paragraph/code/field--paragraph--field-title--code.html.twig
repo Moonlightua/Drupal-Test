@@ -1,0 +1,6 @@
+{% set attribute = element['#bundle'] %}
+{% set classes = classes ?: [ 'paragraph-title', attribute] %}
+
+<div{{ attributes.addClass(classes) }}>
+{{ items[0].content }}
+</div>

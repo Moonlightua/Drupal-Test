@@ -1,0 +1,17 @@
+.menu--footer{
+    justify-content:center;
+  }
+
+.menu__item{
+  text-transform:uppercase;
+  a{
+    font-weight:bold;
+    color: $text-color;
+    font-size:20px;
+
+    &:hover{
+      color: $link-color;
+    }
+  }
+
+}

@@ -1,0 +1,23 @@
+.header {
+  position: relative;
+  z-index: 50;
+
+  &__top {
+    @include media-container();
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+  }
+
+  .block-system-branding-block {
+    margin-right: 30px;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__top {
+      display: none;
+    }
+  }
+}

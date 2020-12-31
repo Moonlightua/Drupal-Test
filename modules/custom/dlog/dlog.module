@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ * Main file for custom hooks and functions.
+ */
+
+
+use Drupal\imagemagick\ImagemagickExecArguments;
+use Drupal\Core\Database\Query\AlterableInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function dlog_theme($existing, $type, $theme, $path) {
+  return [
+    'dlog_previous_next' => [
+      'variables' => [
+        'entity' => NULL,
+      ],
+      'file' => 'dlog.theme.inc',
+      'pattern' => 'dlog_previous_next__',
+    ],
+    'dlog_social_share' => [
+      'variables' => [
+        'url' => NULL,
+        'label' => NULL,
+      ],
+      'file' => 'dlog.theme.inc',
+    ],
+    'dlog_label_with_icon_media_formatter' => [
+      'variables' => [
+        'url' => NULL,
+        'label' => NULL,
+        'filesize' => NULL,
+        'media_type' => NULL,
+        'mime_type' => NULL,
+      ],
+      'file' => 'dlog.theme.inc',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_entity_extra_field_info().
+
+function dlog_entity_extra_field_info() {
+  $extra = [];
+
+  foreach (NodeType::loadMultiple() as $bundle) {
+    $extra['node'][$bundle->id()]['display']['previous_next'] = [
+      'label' => t('Buttons to previous and next entity'),
+      'weight' => 100,
+      'visible' => FALSE,
+    ];
+  }
+
+  return $extra;
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_view().
+
+function dlog_node_view(array &$build, NodeInterface $node, EntityViewDisplayInterface $display, $view_mode) {
+  if ($display->getComponent('previous_next')) {
+    $build['previous_next'] = [
+      '#theme' => 'dlog_previous_next',
+      '#entity' => $node,
+    ];
+  }
+}
+
+*/
+
+
+
+function dlog_imagemagick_arguments_alter(ImagemagickExecArguments $arguments, $command){
+  $arguments->add('-sampling-factor 4:2:0');
+  $arguments->add('-interplace Plane');
+  $arguments->add('-strip');
+}
+
+/**
+ * Implements hook_query_TAG_alter() for entity_query_random.
+ */
+function dlog_query_entity_query_random_alter(AlterableInterface $query) {
+    $query->orderRandom();
+}
+

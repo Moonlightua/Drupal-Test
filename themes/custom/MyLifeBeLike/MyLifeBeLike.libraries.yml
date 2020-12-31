@@ -1,0 +1,48 @@
+style.base:
+  css:
+    base:
+      assets/css/generic.css: {}
+
+style.layout:
+  css:
+    layout:
+      assets/css/elements.css: {}
+      assets/css/objects.css: {}
+
+style.component:
+  css:
+    component:
+      assets/css/components.css: {}
+
+style.utilities:
+  css:
+    state:
+      assets/css/utilities.css: {}
+  dependencies:
+    - MyLifeBeLike/google.fonts
+
+google.fonts:
+  css:
+    theme:
+      //fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=cyrillic&display=swap: { type: external, minified: true }
+
+paragraph.code:
+  js:
+    assets/js/paragraph-code.js: {}
+  dependencies:
+    - MyLifeBeLike/highlightjs
+    - core/drupal
+    - core/jquery.once
+
+# Libraries
+highlightjs:
+  remote: https://highlightjs.org/
+  version: 9.10
+  license:
+    name: BSD
+    gpl-compatible: true
+  css:
+    theme:
+      /libraries/highlightjs/styles/monokai-sublime.css: {}
+  js:
+    /libraries/highlightjs/highlight.pack.min.js: { minfied: true }

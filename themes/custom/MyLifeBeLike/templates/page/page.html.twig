@@ -1,0 +1,15 @@
+{% set bem_block = 'app' %}
+<div class="{{ bem_block }}">
+  {% include '@MyLifeBeLike/include/header.html.twig' %}
+
+  <main{{ main_layout_attributes.addClass( bem_block  ~ '__content') }}>
+    <div class="main-layout__inner">
+      {{ page.content }}
+      {{ page.sidebar_first }}
+    </div>
+  </main>
+  <div class="clear"></div>
+  {% include '@MyLifeBeLike/include/footer.html.twig' %}
+</div>
+
+

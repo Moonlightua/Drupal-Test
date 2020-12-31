@@ -1,0 +1,98 @@
+.paragraph-remote-video-gallery-field-video-gallery{
+  .paragraph-remote-video-gallery-field-video-gallery__item{
+
+    position:relative;
+    height:0;
+    padding-bottom:56.4%;
+
+
+    .youtube-container{
+      overflow:visible;
+      iframe{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+      }
+    }
+  }
+}
+
+.paragraph-remote-video-gallery-field-video-gallery__items{
+  display:flex;
+  flex-flow:row wrap;
+  width:100%;
+
+}
+
+.paragraph-remote-video-gallery--videos-per-row-4.paragraph-remote-video-gallery{
+  .paragraph-remote-video-gallery-field-video-gallery__item{
+
+    iframe{
+      width: 275px;
+    }
+    margin-top: 0;
+    padding: 0;
+    padding-right:1px;
+    width: calc(99.9% * 1 / 4 - (30px - 30px * 1.0));
+    height:100%;
+  }
+
+  .paragraph-remote-video-gallery-field-video-gallery__item:nth-child(1n) {
+    float: left;
+    margin-bottom: 10px;
+    clear: none;
+  }
+  .paragraph-remote-video-gallery-field-video-gallery__item:nth-child(3n + 1) {
+    clear: both;
+  }
+
+}
+
+.paragraph-remote-video-gallery--videos-per-row-3.paragraph-remote-video-gallery{
+  .paragraph-remote-video-gallery-field-video-gallery__item{
+
+    iframe{
+      width: 370px;
+    }
+    margin-top: 0;
+    padding: 0;
+    padding-right:1px;
+    width: calc(99.9% * 1 / 3 - (30px - 30px * 1.0));
+    height:100%;
+  }
+
+  .paragraph-remote-video-gallery-field-video-gallery__item:nth-child(1n) {
+    float: left;
+    margin-bottom: 10px;
+    clear: none;
+  }
+  .paragraph-remote-video-gallery-field-video-gallery__item:nth-child(3n + 1) {
+    clear: both;
+  }
+}
+
+.paragraph-remote-video-gallery--videos-per-row-2.paragraph-remote-video-gallery{
+  .paragraph-remote-video-gallery-field-video-gallery__item{
+
+    iframe{
+      width: 540px;
+
+    }
+    margin-top: 0;
+    padding: 0;
+    padding-right:1px;
+    width: calc(99.9% * 1 / 2 - (30px - 30px * 1.0));
+    height:100%;
+  }
+
+  .paragraph-remote-video-gallery-field-video-gallery__item:nth-child(1n) {
+    float: left;
+    margin-bottom: 10px;
+    clear: none;
+  }
+  .paragraph-remote-video-gallery-field-video-gallery__item:nth-child(3n + 1) {
+    clear: both;
+  }
+}

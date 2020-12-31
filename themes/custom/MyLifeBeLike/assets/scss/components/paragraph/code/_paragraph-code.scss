@@ -1,0 +1,12 @@
+.paragraph-title.code{
+  @include mdi-icon('code-tags');
+  background:gray(200);
+  padding:gap(1) gap(2);
+  font-weight:bold;
+}
+
+.paragraph-code__title{
+  margin-bottom: -20px;
+  border:1px solid gray(400);
+  border-radius:4px;
+}

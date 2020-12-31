@@ -1,0 +1,32 @@
+/**
+ * @file
+ * Styles for ParagraphStyleBehavior.
+ */
+.paragraph-style {
+  &--title-bold {
+    .paragraph-title {
+      font-weight: bold;
+    }
+  }
+
+  &--title-centered {
+    .paragraph-title {
+      text-align: center;
+    }
+  }
+
+  &--style-black {
+    background: #212121;
+    color: white;
+    padding: gap(4);
+  }
+}
+
+.youtube-container{
+  margin-left:0;
+}
+
+.visually-hidden{
+  display:inherit;
+}
+

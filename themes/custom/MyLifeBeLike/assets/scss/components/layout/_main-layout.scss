@@ -1,0 +1,43 @@
+.main-layout {
+  @include media-container();
+  position: relative;
+  z-index: 60;
+
+  &__inner {
+    display:flex;
+    flex-flow:row wrap;
+    background: #ffffff;
+    box-shadow: 0 0 15px 5px rgba(black, 0.05);
+
+  }
+
+    &--sidebar-first{
+
+      // Content settings.
+      .region.region--content{
+        width: calc(99.9% * 4/5 - (30px - 30px * 4/5));
+        position:relative;
+      }
+
+      .region.region--content:nth-child(1n) {
+        float: right;
+      }
+
+
+
+      // Sidebar settings.
+      .region.region--sidebar-first{
+        width: calc(99.9% * 1/5 - (30px - 30px * 1/5));
+        position:relative;
+      }
+
+      .region.region--sidebar-first:nth-child(1n) {
+        float: right;
+      }
+
+    }
+
+
+  }
+
+

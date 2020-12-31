@@ -1,0 +1,51 @@
+$social_icons: (
+  'facebook': 'facebook',
+  'twitter':'twitter',
+  'instagram':'instagram',
+  'youtube':'youtube'
+);
+
+.footer-social{
+
+  &__items{
+    @include list-unstyled;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content:center;
+
+  }
+
+  &__item{
+    margin: 0 gap();
+  }
+
+  &__link{
+    display:block;
+    width:42px;
+    height:42px;
+    border-radius:50px;
+    background:#302b63;
+    box-shadow: 0 3px 6px #302b63;
+    color:white;
+    font-size:24px;
+    line-height:42px;
+    text-align:center;
+    transition: all 0.5s ease;
+
+    &:hover{
+      color:white;
+     background:#FF4B2B;
+    }
+  }
+
+  @each $modifier, $icon in $social_icons {
+    &__link--#{$modifier} {
+      @include mdi-icon($icon, before, 0);
+    }
+  }
+
+}
+
+
+
+
