@@ -1,8 +1,9 @@
 $avatar-width: 40px;
 
-.comment-comment {
+.comment-comment-full {
   display: flex;
   font-size: 16px;
+  padding-top:gap(2);
 
   &__left {
     width: $avatar-width;
@@ -121,4 +122,39 @@ $avatar-width: 40px;
       font-size: 15px;
     }
   }
+}
+
+.node-article-full__field-comments__title{
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 24px;
+  position: relative;
+  text-transform: uppercase;
+
+  &:before{
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #e0e0e0;
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: calc(50% - 1px);
+  }
+
+  span{
+    background: white;
+    position: relative;
+    z-index: 10;
+    padding: 0 16px;
+  }
+}
+
+.js-form-required.form-required{
+  display:none;
+}
+.comment-comment-full__new.hidden{
+  display:none;
 }

@@ -3,6 +3,7 @@
   bem_block,
   bem_block ~ '--' ~ status,
 ] %}
+
 <article{{ attributes.addClass('js-comment', classes) }}>
   <div class="{{ bem_block }}__left">
     {{ content.letter_avatar }}
@@ -14,7 +15,7 @@
       <div class="{{ bem_block }}__header-item">{{ content.homepage }}</div>
       <div class="{{ bem_block }}__header-item">
         <mark class="{{ bem_block }}__new hidden"
-              data-comment-timestamp="{{ new_indicator_timestamp }}"></mark>
+              data-comment-timestamp="{{ new_indicator_timestamp }}">NEW</mark>
       </div>
     </header>
     {{ content|without('letter_avatar', 'links', 'homepage') }}
